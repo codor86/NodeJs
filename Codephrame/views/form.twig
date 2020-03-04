@@ -1,0 +1,68 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-10 align-self-end">
+                    <h1 class="text-uppercase text-white font-weight-bold">Can't just rip a theme now can I?</h1>
+                    <hr class="divider my-4">
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white-75 font-weight-light mb-5">
+                    It's a good looking theme, but it's too easy just getting it to work in Twig and Node...
+                    </p>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#next">Next.....</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="page-section text-center" id="next">
+        <div class="container">
+            <h2 class="text-center mt-0">Let's do something with a database!</h2>
+            <hr class="divider my-4">
+            <h4 class=" mt-0">Are you still in?</h4>
+            <a class=" btn btn-primary btn-xl js-scroll-trigger" href="#form">Im in... do.. do I need safety goggles?</a>
+            <hr class="divider my-4">
+        </div>
+    </section>
+
+    <section id="form">
+        <h2 class="text-center mt-0">It's a form!</h2>
+        <hr class="divider my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 p-3 m-auto" style="background-color:lightgray; border-radius:5px;">
+                    <form class="form" autocomplete="off" action="/form" method="POST">
+                        <input type="hidden" name="_id" value="{{ employee._id }}">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{employee.fullName}}">
+                            <div class="text-danger">
+                                {{ employee.fullNameError }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="email" placeholder="Email" value="{{ employee.email }}">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Mobile</label>
+                                <input type="text" class="form-control" name="mobile" placeholder="Mobile" value="{{ employee.mobile }}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>City</label>
+                                <input type="text" class="form-control" name="city" placeholder="City" value="{{ employee.city }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-info"><i class="fa fa-database mr-1"></i>Submit</button>
+                            <a class="btn btn-secondary" href="/form/list"><i class="fa fa-list-alt"></i> View All</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

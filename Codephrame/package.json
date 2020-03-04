@@ -1,0 +1,29 @@
+{
+  "name": "codephrame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Me deal with it",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.10.2",
+    "body-parser": "^1.19.0",
+    "bootstrap": "4.3.1",
+    "core-util-is": "^1.0.2",
+    "express": "^4.17.1",
+    "jquery": "3.4.1",
+    "jquery.easing": "^1.4.1",
+    "magnific-popup": "^1.1.0",
+    "mogodb": "0.0.1-security",
+    "mongoose": "^5.9.3",
+    "node-twig": "^1.2.0",
+    "nodemon": "^2.0.2",
+    "twig": "^1.15.0"
+  },
+  "devDependencies": {
+    "gulp-util": "^3.0.8"
+  }
+}
